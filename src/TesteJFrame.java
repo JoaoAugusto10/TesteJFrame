@@ -1,8 +1,10 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
 import javax.swing.*;
 public class TesteJFrame extends JFrame implements ActionListener{
+        
         JLabel nome,rg,cpf,logradouro,endereco;
 	JTextField txtNome,txtRg,txtCpf,txtLogradouro,txtEndereco;
 	JButton btnGravar, btnSair;
@@ -29,12 +31,12 @@ public class TesteJFrame extends JFrame implements ActionListener{
                 Color c = JColorChooser.showDialog(null,  
 				"Escolha uma cor", Color.lightGray);
 		getContentPane().setBackground(c);
-		btnGravar 	= criarBotao("Gravar", 'G',150, rodape,larg, alt );
-		btnSair 	= criarBotao("Sair", 'S',330, rodape , larg , alt );
+		btnGravar 	= criarBotao("Gravar", 'G',190, rodape,larg, alt );
+		btnSair 	= criarBotao("Sair", 'S',350, rodape , larg , alt );
 		centralizar();
 		setVisible(true);//Exibindo a janela
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+        }
 	private JButton criarBotao(String string, char c, int distEsq, int rodape, int larg, int altura) {
 		JButton b1 = new JButton(string);
 		b1.setBounds(distEsq, 240, larg, altura); //D Esq, D Topo, larg, alt
@@ -93,5 +95,5 @@ public class TesteJFrame extends JFrame implements ActionListener{
 		if(e.getSource()==btnSair)
 			System.exit(0);		
 	}
-        
+
 }

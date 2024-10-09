@@ -9,7 +9,7 @@ public class TesteJFrame extends JFrame implements ActionListener{
 	JTextField txtNome,txtRg,txtCpf,txtLogradouro,txtEndereco;
 	JButton btnGravar, btnSair;
 	
-	public TesteJFrame(){
+	public TesteJFrame(){ 
 		setTitle("Primeira Janela Swing");//Titulo da janela
 		setSize(700,350);		//tamanho da janela		
 		setLayout(null);// anula o layout padrao
